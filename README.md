@@ -1,1 +1,1 @@
-# Algorithm sice 2022
+# Algorithm since 2022
