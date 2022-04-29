@@ -1,4 +1,3 @@
-```jsx
 function solution(participant, completion) {
     //Map함수를 통해 배열의 각 요소 카운트 수를 관리하기.
 const map = new Map();
@@ -17,4 +16,3 @@ const map = new Map();
     }
     
     }
-```
