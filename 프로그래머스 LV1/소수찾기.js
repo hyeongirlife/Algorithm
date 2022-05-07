@@ -1,22 +1,23 @@
 function solution(n) {
     let answer = 0;
-    const arr = new Array(n+1).fill(true);
-      
-    for(let i = 2; i <= n; ++i){
-        // 이미 소수가 아닌 인덱스는 건너뛴다.
-        if(arr[i] === false){
-            continue; 
+    let arr = []
+    for(let i=2; i<=n; i++){
+        arr[i] = i
+    }
+    //2부터 시작해서 특정 숫자의 배수에 해당하는 숫자들은 모두 지운다.
+    for(let j=2; j<=n; j++){
+    //이미 0 처리된 값은 패스한다.
+        if(arr[j] === 0){
+            continue;
         }
-        // 배수는 소수가 아니라 0으로 설정
-        for(let k = i * 2; k <= n; k += i){
-            arr[k] = false;
+        for(let k=j*2; k<=n; k+=j){
+            arr[k] = 0
         }
     }
-    // 소수의 갯수를 구한다.
-    for(let i = 2; i <= n; ++i){
-        if(arr[i] === true){
-            answer++;
+    for(let l=2; l<=n; l++){
+        if(arr[l] !== 0){
+            answer ++
         }
     }
-    return answer;
-}
+        return answer
+    }
