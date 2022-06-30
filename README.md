@@ -1,1 +1,1 @@
-# Algorithm since 2022
+# Algorithm
